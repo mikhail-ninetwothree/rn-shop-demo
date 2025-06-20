@@ -1,0 +1,37 @@
+export default {
+    // Common
+    ok: 'OK',
+    cancel: 'Cancel',
+    back: 'Back',
+    done: 'Done',
+    continue: 'Continue',
+    yes: 'Yes',
+    no: 'No',
+    tryAgain: 'Try Again',
+
+    // Environment
+    envSplashTTitle: '%s Environment',
+    envSplashTVersion: 'Version %s',
+
+    // Login
+    loginIUsername: 'Enter your email',
+    loginIPassword: 'Enter your password',
+    loginBtn: 'Log In',
+
+    // Home
+    homeBtnLogout: 'Log Out',
+
+    // Errors
+    errorInvalidEmailFormat: 'Invalid email format',
+    errorRequiredField: 'This is a required field',
+    errorInvalidPassword: 'Must be at least 6 characters',
+    errorUnexpected: 'Unexpected Error: %s',
+    errorGeneric: 'Something went wrong',
+    errorWhoops: 'Whoops',
+
+    // Network Errors
+    errorUnauthorized: 'Authorization error',
+    errorServerError: 'Looks like we are running into some issues communicating with the server',
+    errorNoInternetTTitle: 'Not connected to the internet',
+    errorNoInternetTDesc: 'Please check your network connection.',
+};

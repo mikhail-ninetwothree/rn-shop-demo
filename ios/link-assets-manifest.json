@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/RethinkSans-Regular.ttf",
+      "sha1": "3b73897aac42a6ebad0bc8343ff370da39ba5dac"
+    },
+    {
+      "path": "assets/fonts/RethinkSans-SemiBold.ttf",
+      "sha1": "51dd29e7d05b2e57c5e3b1fa7f2fc836f6a75ba3"
+    }
+  ]
+}
