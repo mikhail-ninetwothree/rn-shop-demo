@@ -16,9 +16,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-                     BuildableName = "ReactNativeBoilerplate QA.app"
-                     BlueprintName = "ReactNativeBoilerplate"
-                     ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
+                     BuildableName = "rnshopdemo QA.app"
+                     BlueprintName = "rnshopdemo"
+                     ReferencedContainer = "container:rnshopdemo.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ReactNativeBoilerplate QA.app"
-               BlueprintName = "ReactNativeBoilerplate"
-               ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
+               BuildableName = "rnshopdemo QA.app"
+               BlueprintName = "rnshopdemo"
+               ReferencedContainer = "container:rnshopdemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -68,9 +68,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-                     BuildableName = "ReactNativeBoilerplate QA.app"
-                     BlueprintName = "ReactNativeBoilerplate"
-                     ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
+                     BuildableName = "rnshopdemo QA.app"
+                     BlueprintName = "rnshopdemo"
+                     ReferencedContainer = "container:rnshopdemo.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -81,9 +81,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReactNativeBoilerplate QA.app"
-            BlueprintName = "ReactNativeBoilerplate"
-            ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
+            BuildableName = "rnshopdemo QA.app"
+            BlueprintName = "rnshopdemo"
+            ReferencedContainer = "container:rnshopdemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -98,9 +98,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ReactNativeBoilerplate QA.app"
-            BlueprintName = "ReactNativeBoilerplate"
-            ReferencedContainer = "container:ReactNativeBoilerplate.xcodeproj">
+            BuildableName = "rnshopdemo QA.app"
+            BlueprintName = "rnshopdemo"
+            ReferencedContainer = "container:rnshopdemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

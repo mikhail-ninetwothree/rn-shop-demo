@@ -1,4 +1,4 @@
-package com.reactnativeboilerplate
+package com.ninetwothree.rnshopdemo
 
 import android.app.Application
 import com.facebook.react.PackageList
