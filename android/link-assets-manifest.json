@@ -2,6 +2,14 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "assets/fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf",
+      "sha1": "f0b973155b2836a02d172a742fb780a5abaf2c08"
+    },
+    {
+      "path": "assets/fonts/Raleway-Bold.ttf",
+      "sha1": "ab21b55115bd50a57f3a95ec4eda834eee675d04"
+    },
+    {
       "path": "assets/fonts/RethinkSans-Regular.ttf",
       "sha1": "3b73897aac42a6ebad0bc8343ff370da39ba5dac"
     },

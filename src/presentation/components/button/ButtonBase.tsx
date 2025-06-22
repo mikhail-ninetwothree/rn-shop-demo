@@ -95,7 +95,7 @@ const themedStyles = (isSmall: boolean = false, flex: number | undefined = undef
         flex: flex,
     },
     title: {
-        ...Fonts.Subtitle,
+        ...Fonts.Button,
     },
     icon: {
         marginRight: isSmall ? Dimens.marginPrimaryHalf : Dimens.marginPrimary,

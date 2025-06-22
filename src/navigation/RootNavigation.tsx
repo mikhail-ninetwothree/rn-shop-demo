@@ -3,12 +3,12 @@ import { useAppContext } from '@presentation/context/AppContext';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Routes, { RootStackParamList } from '@navigation/routes';
-import LoginScreen from '@screens/auth/login/LoginScreen';
+import WelcomeScreen from 'src/presentation/screens/auth/welcome/WelcomeScreen';
 import HomeScreen from '@screens/home/HomeScreen';
+import LoginScreen from 'src/presentation/screens/auth/login/LoginScreen';
 
 const MainStack = createStackNavigator<RootStackParamList>();
 const AuthStack = createStackNavigator<RootStackParamList>();
-
 
 export default () => {
     const { appState } = useAppContext();
@@ -36,6 +36,7 @@ function MainNavigator(): ReactElement {
 function AuthNavigator(): ReactElement {
     return (
         <AuthStack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
+            <AuthStack.Screen name={Routes.Welcome} component={WelcomeScreen} />
             <AuthStack.Screen name={Routes.Login} component={LoginScreen} />
         </AuthStack.Navigator>
     );

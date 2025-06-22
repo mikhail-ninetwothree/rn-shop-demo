@@ -32,16 +32,19 @@ export default {
     marginPrimary1_5X: 12,
     marginPrimary1_75X: 14,
     marginPrimary2X: 16,
+    marginPrimary2_25X: 18,
     marginPrimary2_5X: 20,
     marginPrimary3X: 24,
-    marginPrimary4X: 32,
-    marginPrimary5X: 40,
-    marginPrimary6X: 48,
-    marginPrimary7X: 56,
+    marginPrimary4X: 26,
+    marginPrimary5X: 32,
+    marginPrimary6X: 40,
+    marginPrimary7X: 48,
+    marginPrimary8X: 56,
     marginPrimary10X: 80,
+    marginPrimary11X: 84,
 
     // Radii
-    btnCornerRadius: 12,
+    btnCornerRadius: 16,
     btnSmallCornerRadius: 8,
     inputRadius: 12,
     radiusSmallest: 4,
@@ -51,6 +54,10 @@ export default {
     radiusMedium: 16,
     radiusMax: 1000,
 
+    // Offset
+    offsetZero: 0,
+    offsetSmallest: 1,
+
     // Misc
     borderWidth: 1,
     borderWidthThick: 2,
@@ -58,15 +65,17 @@ export default {
 
     // View Sizes
     progressSize: 48,
-    btnHeight: 54,
+    btnHeight: 61,
     btnHeightSmall: 36,
     inputHeight: 66,
     backBtnSize: 48,
     textBtnIconSize: 20,
     btnIconSize: 24,
     loginIcSize: 128,
+    welcomeIcSize: 134,
 
     // Font Weight
+    fontWeightLight300: 300,
     fontWeightRegular400: 400,
     fontWeightMedium500: 500,
     fontWeightSemiBold600: 600,
@@ -78,14 +87,17 @@ export default {
     fontSizeNormal: 14,
     fontSizeMedium: 16,
     fontSizeLarge: 18,
-    fontSizeXLarge: 20,
-    fontSizeX2Large: 22,
-    fontSizeX3Large: 24,
-    fontSizeX4Large: 26,
-    fontSizeX5Large: 28,
-    fontSizeX6Large: 30,
-    fontSizeX7Large: 32,
-    fontSizeX8Large: 34,
+    fontSizeXLarge: 19,
+    fontSizeX2Large: 20,
+    fontSizeX3Large: 22,
+    fontSizeX4Large: 24,
+    fontSizeX5Large: 26,
+    fontSizeX6Large: 28,
+    fontSizeX7Large: 30,
+    fontSizeX8Large: 32,
+    fontSizeX9Large: 34,
+    fontSizeX10Large: 36,
+    fontSizeLargest: 52,
 
     // Font Line Height
     lineHeightSmall: 10,
@@ -94,6 +106,9 @@ export default {
     lineHeightMedium: 20,
     lineHeightLarge: 24,
     lineHeightXLarge: 30,
+    lineHeightX_5Large: 31,
     lineHeightX2Large: 32,
-    lineHeightLargest: 48,
+    lineHeightX3Large: 33,
+    lineHeightX4Large: 48,
+    lineHeightLargest: 61,
 } as const;

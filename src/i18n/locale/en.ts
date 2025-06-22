@@ -13,6 +13,11 @@ export default {
     envSplashTTitle: '%s Environment',
     envSplashTVersion: 'Version %s',
 
+    // Welcome
+    welcomeTitle: 'Shoppe',
+    welcomeSubtitle: 'Discover trendy products, exclusive\ndeals and a seamless shopping experience',
+    welcomeBtn: 'Let\'s get started',
+
     // Login
     loginIUsername: 'Enter your email',
     loginIPassword: 'Enter your password',
