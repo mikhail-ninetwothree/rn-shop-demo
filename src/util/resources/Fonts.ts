@@ -3,24 +3,31 @@ import { TextStyle } from 'react-native';
 
 // TODO: Usually, our designers calls the fonts like H1, H2, H3, Body, Subtitle, etc. so you can expand here. Also
 const H1 = {
-    fontFamily: 'RethinkSans-SemiBold',
+    fontFamily: 'Raleway-Bold',
     fontWeight: Dimens.fontWeightBold,
-    fontSize: Dimens.fontSizeX8Large,
+    fontSize: Dimens.fontSizeLargest,
     lineHeight: Dimens.lineHeightLargest,
 } as TextStyle;
 
 const H3 = {
     fontFamily: 'RethinkSans-SemiBold',
-    fontWeight: Dimens.fontWeightSemiBold600,
+    fontWeight: Dimens.fontWeightLight300,
     fontSize: Dimens.fontSizeXLarge,
     lineHeight: Dimens.lineHeightXLarge,
 } as TextStyle;
 
-const Subtitle = {
-    fontFamily: 'RethinkSans-SemiBold',
-    fontWeight: Dimens.fontWeightSemiBold600,
-    fontSize: Dimens.fontSizeMedium,
-    lineHeight: Dimens.lineHeightLarge,
+const H4 = {
+    fontFamily: 'NunitoSans',
+    fontWeight: Dimens.fontWeightLight300,
+    fontSize: Dimens.fontSizeXLarge,
+    lineHeight: Dimens.lineHeightX3Large,
+} as TextStyle;
+
+const Button = {
+    fontFamily: 'NunitoSans',
+    fontWeight: Dimens.fontWeightLight300,
+    fontSize: Dimens.fontSizeX3Large,
+    lineHeight: Dimens.lineHeightX_5Large,
 } as TextStyle;
 
 const SubtitleSmall = {
@@ -47,7 +54,8 @@ const Caption = {
 export default {
     H1,
     H3,
-    Subtitle,
+    H4,
+    Button,
     SubtitleSmall,
     Body,
     Caption,

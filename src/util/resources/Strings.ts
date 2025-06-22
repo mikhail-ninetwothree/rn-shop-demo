@@ -13,6 +13,11 @@ export enum Strings {
     envSplashTTitle = 'envSplashTTitle',
     envSplashTVersion = 'envSplashTVersion',
 
+    // Welcome
+    welcomeTitle = 'welcomeTitle',
+    welcomeSubtitle = 'welcomeSubtitle',
+    welcomeBtn = 'welcomeBtn',
+
     // Login
     loginIUsername = 'loginIUsername',
     loginIPassword = 'loginIPassword',

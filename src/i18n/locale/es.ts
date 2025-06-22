@@ -1,4 +1,9 @@
 export default {
+    // Welcome
+    welcomeTitle: 'Shoppe',
+    welcomeSubtitle: 'Discover trendy products, exclusive\ndeals and a seamless shopping experience',
+    welcomeBtn: 'Let\'s get started',
+
     // Login
     loginIUsername: 'Ingresa tu correo electrónico',
     loginIPassword: 'Ingresa tu contraseña',

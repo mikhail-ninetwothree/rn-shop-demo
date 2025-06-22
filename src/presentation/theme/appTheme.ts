@@ -6,7 +6,6 @@ import { getAppTheme } from '@data/local/appStorage';
 
 declare module '@rneui/themed' {
     export interface Colors {
-        // TODO: add/remove the colors that needed
         primaryDark: string;
         textPrimary: string;
         textPrimaryLight: string;
@@ -30,6 +29,7 @@ declare module '@rneui/themed' {
         bsBackdrop: string;
         bsHandleIndicator: string;
         textPrimaryStrict: string;
+        shadowPrimary: string;
     }
 }
 
@@ -77,9 +77,12 @@ export const preferredTheme = (): AppTheme => {
 const appTheme = (selectedTheme: AppTheme) => createTheme({
     // TODO: add/remove the colors that needed
     lightColors: {
+        // shadow colors
+        shadowPrimary: '#000000',
+
         // main colors
-        primary: '#C67C4E',
-        primaryDark: '#B27046',
+        primary: '#004CFF',
+        primaryDark: '#004CFF80',
         secondary: '#B2E1E1',
         secondaryDark: '#86D1D1',
         danger: '#D75D45',
@@ -87,7 +90,7 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         dangerLight: '#E28270',
 
         // text colors
-        textPrimary: '#050505',
+        textPrimary: '#202020',
         textPrimaryLight: '#242424',
         textSecondary: '#303336',
         textSecondaryLight: '#828488',
@@ -109,15 +112,18 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         // misc colors
         white: '#FFFFFF',
         background: '#FFFFFF',
-        surface: '#F9F9F9',
+        surface: '#FFFFFF',
         error: '#ED5151',
         clear: '#FFFFFF00',
         errorLightest: '#FDDFD9',
     },
     darkColors: {
+        // shadow colors
+        shadowPrimary: '#000000',
+
         // main colors
-        primary: '#9E633E',
-        primaryDark: '#6A432A',
+        primary: '#004CFF',
+        primaryDark: '#004CFF80',
         secondary: '#B2E1E1',
         secondaryDark: '#86D1D1',
         danger: '#D75D45',
@@ -125,7 +131,7 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         dangerLight: '#E28270',
 
         // text colors
-        textPrimary: '#F9F9F9',
+        textPrimary: '#202020',
         textPrimaryLight: '#D8D8D8',
         textSecondary: '#303336',
         textSecondaryLight: '#828488',
@@ -147,7 +153,7 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         // misc colors
         white: '#FFFFFF',
         background: '#242424',
-        surface: '#3F3F3F',
+        surface: '#FFFFFF',
         error: '#bd4040',
         clear: '#FFFFFF00',
         errorLightest: '#FDDFD9',

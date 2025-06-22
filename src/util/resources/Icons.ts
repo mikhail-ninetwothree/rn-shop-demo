@@ -3,6 +3,7 @@ import Back from '../../../assets/icons/ic_back.svg';
 import AlertError from '../../../assets/icons/ic_alert_error.svg';
 import AlertSuccess from '../../../assets/icons/ic_alert_success.svg';
 import Trash from '../../../assets/icons/ic_trash.svg';
+import WelcomeLogo from '../../../assets/icons/ic_welcome_logo.svg';
 
 export default {
     Terminal,
@@ -10,4 +11,5 @@ export default {
     AlertError,
     AlertSuccess,
     Trash,
+    WelcomeLogo
 };
