@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Text, useTheme } from '@rneui/themed';
 import { Formik } from 'formik';
 import { TextInput, View } from 'react-native';
@@ -11,11 +11,12 @@ import InputWError, { handleFieldChange } from '@components/InputWError';
 import { LoginData } from '@data/auth/models/LoginData';
 import { useLogin } from './hooks/useLogin';
 import FullscreenProgress from '@components/FullscreenProgress';
-import { appVersion, flavor } from '@appInfo';
-import Icons from '@icons';
+import Images from '@images';
 import Dimens from '@dimens';
 import ButtonPrimary from '@components/button/ButtonPrimary';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import SecureInputWError from 'src/presentation/components/SecureInputWError';
+import Icons from 'src/util/resources/Icons';
 
 const USERNAME_FIELD = 'username';
 const PASSWORD_FIELD = 'password';
@@ -29,56 +30,63 @@ export default () => {
     const { theme } = useTheme();
     const insets = useSafeAreaInsets();
     const styles = themedStyles(theme.colors, insets);
-    const { makeLogin, isLoading } = useLogin();
+    const { makeLogin, isPending } = useLogin();
     const passwordInputRef = useRef<TextInput>(null);
-
     return (
         <View style={styles.container}>
-            <Icons.Terminal width={Dimens.loginIcSize} height={Dimens.loginIcSize} fill={theme.colors.primary}/>
-            <Text style={styles.version}>{flavor?.toUpperCase()} {appVersion}</Text>
-            <Formik
-                initialValues={initialValues}
-                validationSchema={loginFormValidationSchema}
-                validateOnBlur={true}
-                validateOnChange={false}
-                validateOnMount={false}
-                onSubmit={values => makeLogin(values)}>
-                {({ handleChange, handleBlur, handleSubmit, values, errors, setFieldError }) => (
-                    <View style={styles.formContainer}>
-                        <View style={styles.inputContainer}>
-                            <InputWError
-                                onChangeText={handleFieldChange(USERNAME_FIELD, setFieldError, handleChange)}
-                                handleBlur={handleBlur(USERNAME_FIELD)}
-                                value={values.username}
-                                error={errors.username}
-                                returnKeyType={'next'}
-                                placeholder={getString(Strings.loginIUsername)}
-                                onSubmitEditing={() => passwordInputRef.current?.focus()}
+            <Images.LoginBackground width={Dimens.full} height={Dimens.full} style={styles.background}/>
+            <View style={styles.content}>
+                <Spacer/>
+                <Text style={styles.title}>{getString(Strings.loginTitle)}</Text>
+                <View style={styles.subtitleContainer}>
+                    <Text style={styles.subtitle}>{getString(Strings.loginSubtitle)}</Text>
+                    <Icons.Heart/>
+                </View>
+                <Formik
+                    initialValues={initialValues}
+                    validationSchema={loginFormValidationSchema}
+                    validateOnBlur={true}
+                    validateOnChange={false}
+                    validateOnMount={false}
+                    onSubmit={values => makeLogin(values)}>
+                    {({ handleChange, handleBlur, handleSubmit, values, errors, setFieldError }) => (
+                        <View style={styles.formContainer}>
+                            <View style={styles.inputContainer}>
+                                <InputWError
+                                    placeholder={getString(Strings.loginIUsername)}
+                                    onChangeText={handleFieldChange(USERNAME_FIELD, setFieldError, handleChange)}
+                                    handleBlur={handleBlur(USERNAME_FIELD)}
+                                    value={values.username}
+                                    error={errors.username}
+                                    returnKeyType={'next'}
+                                    autoCapitalize={'none'}
+                                    onSubmitEditing={() => passwordInputRef.current?.focus()}
+                                />
+                            </View>
+                            <View style={styles.inputContainer}>
+                                <SecureInputWError
+                                    ref={passwordInputRef}
+                                    placeholder={getString(Strings.loginIPassword)}
+                                    onChangeText={handleFieldChange(PASSWORD_FIELD, setFieldError, handleChange)}
+                                    handleBlur={handleBlur(PASSWORD_FIELD)}
+                                    value={values.password}
+                                    error={errors.password}
+                                    returnKeyType={'done'}
+                                    onSubmitEditing={() => handleSubmit()}
+                                />
+                            </View>
+                            <ButtonPrimary
+                                marginTop={Dimens.marginPrimary4_5X}
+                                marginBottom={Dimens.marginPrimary9X}
+                                title={getString(Strings.loginBtn)}
+                                onClick={handleSubmit}
+                                isDisabled={isPending || !values.username.length || !values.password.length}
                             />
                         </View>
-                        <View style={styles.inputContainer}>
-                            <InputWError
-                                ref={passwordInputRef}
-                                onChangeText={handleFieldChange(PASSWORD_FIELD, setFieldError, handleChange)}
-                                handleBlur={handleBlur(PASSWORD_FIELD)}
-                                value={values.password}
-                                error={errors.password}
-                                returnKeyType={'done'}
-                                placeholder={getString(Strings.loginIPassword)}
-                                onSubmitEditing={() => handleSubmit()}
-                            />
-                        </View>
-                        <Spacer/>
-                        <ButtonPrimary
-                            marginTop={Dimens.marginPrimary4X}
-                            title={getString(Strings.loginBtn)}
-                            onClick={handleSubmit}
-                            disabled={isLoading || !values.username.length || !values.password.length}
-                        />
-                    </View>
-                )}
-            </Formik>
-            {isLoading && <FullscreenProgress/>}
+                    )}
+                </Formik>
+                {isPending && <FullscreenProgress/>}
+            </View>
         </View>
     );
 };

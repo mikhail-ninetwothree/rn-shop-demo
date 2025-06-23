@@ -8,19 +8,35 @@ export const themedStyles = (colors: Colors, insets: EdgeInsets) => StyleSheet.c
     container: {
         flex: Dimens.fullFlex,
         backgroundColor: colors.surface,
-        alignItems: 'center',
-        paddingTop: insets.top + Dimens.marginPrimary2_5X,
-        paddingBottom: insets.bottom + Dimens.marginPrimary2X,
-        paddingHorizontal: Dimens.marginPrimary2X,
     },
-    version: {
-        ...Fonts.Subtitle,
+    background: {
+        position: Dimens.positionAbsolute
+    },
+    title: {
+        ...Fonts.H1,
+        color: colors.textPrimary,
+        marginBottom: Dimens.marginPrimaryHalf
+    },
+    subtitleContainer: {
+        flexDirection: Dimens.horizontal,
+        alignItems: Dimens.alignCenter,
+        marginBottom: Dimens.marginPrimary2_25X
+    },
+    subtitle: {
+        ...Fonts.H4,
+        color: colors.textPrimary,
+        marginRight: Dimens.marginPrimary1_25X
+    },
+    content: {
+        flex: Dimens.fullFlex,
+        paddingTop: insets.top,
+        paddingBottom: insets.bottom,
+        paddingHorizontal: Dimens.marginPrimary2_5X
     },
     formContainer: {
-        flex: 1,
-        width: '100%',
+
     },
     inputContainer: {
-        marginTop: Dimens.marginPrimary2X,
-    },
+        marginBottom: Dimens.marginPrimary
+    }
 });

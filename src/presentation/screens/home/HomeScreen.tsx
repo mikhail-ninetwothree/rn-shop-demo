@@ -19,7 +19,7 @@ export default () => {
     const handleLogoutClick = () => {
         openCancelActionBottomSheet({
             title: getString(Strings.homeBtnLogout),
-            ImageSvg: Icons.Terminal,
+            ImageSvg: Icons.Heart,
             btnPrimaryTitle: getString(Strings.homeBtnLogout),
             onCancelClick: logOut,
         });

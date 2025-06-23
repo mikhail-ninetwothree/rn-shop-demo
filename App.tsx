@@ -8,7 +8,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '@data/remote/networkModule';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import EnvironmentScreen from '@screens/env_splash/EnvironmentScreen';
-import { isTestEnv } from '@appInfo';
+import { isIOS, isTestEnv } from '@appInfo';
 import Constants from '@consts';
 import { StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -16,6 +16,13 @@ import FullscreenProgress from '@components/FullscreenProgress';
 import { NotifierWrapper } from 'react-native-notifier';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import AppBottomSheetModalProvider from 'src/provider/AppBottomSheetModalProvider';
+import KeyboardManager from 'react-native-keyboard-manager';
+
+if (isIOS) {
+    KeyboardManager.setEnable(true);
+    KeyboardManager.setEnableAutoToolbar(false);
+    KeyboardManager.setShouldResignOnTouchOutside(true);
+}
 
 const App = () => {
   return (

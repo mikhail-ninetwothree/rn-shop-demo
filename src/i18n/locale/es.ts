@@ -5,6 +5,8 @@ export default {
     welcomeBtn: 'Let\'s get started',
 
     // Login
+    loginTitle: 'Login',
+    loginSubtitle: 'Good to see you back!',
     loginIUsername: 'Ingresa tu correo electrónico',
     loginIPassword: 'Ingresa tu contraseña',
     loginBtn: 'Acceso',

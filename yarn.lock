@@ -6532,6 +6532,11 @@ react-native-is-edge-to-edge@1.1.7, react-native-is-edge-to-edge@^1.1.7:
   resolved "https://registry.yarnpkg.com/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.1.7.tgz#28947688f9fafd584e73a4f935ea9603bd9b1939"
   integrity sha512-EH6i7E8epJGIcu7KpfXYXiV2JFIYITtq+rVS8uEb+92naMRBdxhTuS8Wn2Q7j9sqyO0B+Xbaaf9VdipIAmGW4w==
 
+react-native-keyboard-manager@^6.5.16-0:
+  version "6.5.16-0"
+  resolved "https://registry.yarnpkg.com/react-native-keyboard-manager/-/react-native-keyboard-manager-6.5.16-0.tgz#ead536f01ade296f483cbf3ecaf3026cff702c9c"
+  integrity sha512-vdNp7PZ0hfxeJXqi7RaHTriQgZqIFKaG3Kx8e4Bdtkne8y9wQ1gGsiAfee+dmmo2kWZaDSbBB7CCKJwRIy5zGg==
+
 react-native-notifier@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-native-notifier/-/react-native-notifier-2.0.0.tgz#99bb703fae8cbf0c0465a5beacdca923613344fa"

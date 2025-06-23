@@ -38,15 +38,15 @@ const SubtitleSmall = {
 } as TextStyle;
 
 const Body = {
-    fontFamily: 'RethinkSans-Regular',
-    fontWeight: Dimens.fontWeightRegular400,
-    fontSize: Dimens.fontSizeMedium,
-    lineHeight: Dimens.lineHeightLarge,
+    fontFamily: 'Poppins-Medium',
+    fontWeight: Dimens.fontWeightMedium500,
+    fontSize: Dimens.fontSizeNormal,
+    lineHeight: Dimens.lineHeightMedium,
 };
 
 const Caption = {
-    fontFamily: 'RethinkSans-Regular',
-    fontWeight: Dimens.fontWeightMedium500,
+    fontFamily: 'NunitoSans',
+    fontWeight: Dimens.fontWeightRegular400,
     fontSize: Dimens.fontSizeSmall,
     lineHeight: Dimens.lineHeightNormal,
 } as TextStyle;

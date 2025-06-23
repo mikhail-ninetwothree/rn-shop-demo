@@ -19,8 +19,10 @@ export default {
     welcomeBtn: 'Let\'s get started',
 
     // Login
-    loginIUsername: 'Enter your email',
-    loginIPassword: 'Enter your password',
+    loginTitle: 'Login',
+    loginSubtitle: 'Good to see you back!',
+    loginIUsername: 'Username',
+    loginIPassword: 'Password',
     loginBtn: 'Log In',
 
     // Home

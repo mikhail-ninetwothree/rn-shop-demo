@@ -6,6 +6,7 @@ export default {
     half: '50%',
     halfNum: 0.5,
     fullNum: 1.0,
+    horizontal: 'row',
 
     // Position
     positionAbsolute: 'absolute',
@@ -36,17 +37,20 @@ export default {
     marginPrimary2_5X: 20,
     marginPrimary3X: 24,
     marginPrimary4X: 26,
+    marginPrimary4_5X: 28,
     marginPrimary5X: 32,
+    marginPrimary5_5X: 36,
     marginPrimary6X: 40,
     marginPrimary7X: 48,
     marginPrimary8X: 56,
+    marginPrimary9X: 73,
     marginPrimary10X: 80,
     marginPrimary11X: 84,
 
     // Radii
     btnCornerRadius: 16,
     btnSmallCornerRadius: 8,
-    inputRadius: 12,
+    inputRadius: 26,
     radiusSmallest: 4,
     radiusSmaller: 6,
     radiusSmall: 8,
@@ -67,11 +71,10 @@ export default {
     progressSize: 48,
     btnHeight: 61,
     btnHeightSmall: 36,
-    inputHeight: 66,
+    inputHeight: 52,
     backBtnSize: 48,
     textBtnIconSize: 20,
     btnIconSize: 24,
-    loginIcSize: 128,
     welcomeIcSize: 134,
 
     // Font Weight

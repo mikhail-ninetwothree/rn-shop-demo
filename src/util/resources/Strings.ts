@@ -19,6 +19,8 @@ export enum Strings {
     welcomeBtn = 'welcomeBtn',
 
     // Login
+    loginTitle = 'loginTitle',
+    loginSubtitle = 'loginSubtitle',
     loginIUsername = 'loginIUsername',
     loginIPassword = 'loginIPassword',
     loginBtn = 'loginBtn',
