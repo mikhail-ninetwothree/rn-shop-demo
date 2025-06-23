@@ -9,8 +9,7 @@ export const themedStyles = (colors: Colors, insets: EdgeInsets) => StyleSheet.c
         flex: Dimens.fullFlex,
         backgroundColor: colors.surface,
         paddingTop: insets.top,
-        paddingBottom: insets.bottom,
-        paddingHorizontal: Dimens.marginPrimary2_5X
+        paddingBottom: insets.bottom
     },
     centerContent: {
         flex: Dimens.fullFlex,
@@ -46,6 +45,7 @@ export const themedStyles = (colors: Colors, insets: EdgeInsets) => StyleSheet.c
         position: Dimens.positionAbsolute,
         width: Dimens.full,
         bottom: insets.bottom + Dimens.marginPrimary11X,
-        alignSelf: Dimens.alignCenter
+        alignSelf: Dimens.alignCenter,
+        paddingHorizontal: Dimens.marginPrimary2_5X
     }
 });

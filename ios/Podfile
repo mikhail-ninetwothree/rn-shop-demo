@@ -30,6 +30,9 @@ target 'rnshopdemo' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Add temporary IQKeyboardManagerSwift fork to solve problems with PrivacyInfo.xcprivacy
+  pod 'IQKeyboardManagerSwift', :git => 'https://github.com/douglasjunior/IQKeyboardManager.git', :branch => 'react-native-keyboard-manager'
+
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(

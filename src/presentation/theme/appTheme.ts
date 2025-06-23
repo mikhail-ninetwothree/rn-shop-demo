@@ -91,7 +91,7 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
 
         // text colors
         textPrimary: '#202020',
-        textPrimaryLight: '#242424',
+        textPrimaryLight: '#D2D2D2',
         textSecondary: '#303336',
         textSecondaryLight: '#828488',
         textAppPrimary: '#C67C4E',
@@ -102,7 +102,7 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
 
         // components colors
         greyOutline: '#A2A2A2',
-        inputBackground: '#FFFFFF',
+        inputBackground: '#F8F8F8',
         progressBackground: '#00000026',
         disabled: '#B9BBBE',
         disabledLight: '#F0F1F5',
@@ -132,7 +132,7 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
 
         // text colors
         textPrimary: '#202020',
-        textPrimaryLight: '#D8D8D8',
+        textPrimaryLight: '#D2D2D2',
         textSecondary: '#303336',
         textSecondaryLight: '#828488',
         textAppPrimary: '#C67C4E',
@@ -143,9 +143,9 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
 
         // components colors
         greyOutline: '#A2A2A2',
-        inputBackground: '#787878',
+        inputBackground: '#F8F8F8',
         progressBackground: '#00000026',
-        disabled: '#B9BBBE',
+        disabled: '#F9F9F9',
         disabledLight: '#F0F1F5',
         bsBackdrop: '#14181BB2',
         bsHandleIndicator: '#3C3C434D',

@@ -7,8 +7,7 @@ import useAlert from '@alert';
 export const useLogin = () => {
     const { logIn } = useAppContext();
     const { showAlert } = useAlert();
-    const { mutate, isLoading } = useLoginMutation();
-
+    const { mutate, isPending } = useLoginMutation();
     const makeLogin = (data: LoginData) => {
         mutate(data, {
             onSuccess: async (result) => {
@@ -22,5 +21,5 @@ export const useLogin = () => {
         });
     };
 
-    return { makeLogin, isLoading };
+    return { makeLogin, isPending };
 };

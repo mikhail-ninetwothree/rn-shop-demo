@@ -60,7 +60,7 @@ export const parseNetworkError = (errorCode?: number, errorBody?: ErrorBody, axi
     }
     switch (errorCode) {
         case ErrorCode.BAD_REQUEST:
-            return new BadRequestError(getString(Strings.errorServerError));
+            return new ErrorCause(errorBody?.message ?? getString(Strings.errorServerError), errorCode);
         case ErrorCode.UNAUTHORIZED:
             return new UnauthorizedError();
         case ErrorCode.FORBIDDEN:

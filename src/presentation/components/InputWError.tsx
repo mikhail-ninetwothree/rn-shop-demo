@@ -76,12 +76,7 @@ export default forwardRef<TextInput, InputWErrorProps>(
                 <Input
                     ref={ref}
                     containerStyle={[styles.inputBar, isFocused && styles.inputBarFocused, props.error && styles.inputBarError, props.isDisabled && styles.inputBarDisabled]}
-                    inputContainerStyle={[
-                        styles.inputContainer,
-                        hasIconOrNode ?
-                            { marginTop: value ? -Dimens.marginPrimaryHalf1_5X : Dimens.marginPrimaryHalf } :
-                            { marginTop: value ? -Dimens.marginPrimaryQuarter : Dimens.marginPrimaryHalf },
-                    ]}
+                    inputContainerStyle={styles.inputContainer}
                     onBlur={() => {
                         handleBlur;
                         setFocusedState(false);
@@ -97,7 +92,6 @@ export default forwardRef<TextInput, InputWErrorProps>(
                             <RightIconSvg
                                 width={Dimens.textBtnIconSize}
                                 height={Dimens.textBtnIconSize}
-                                fill={contentStateColor}
                             />
                         </Pressable> : RightComponentNode && RightComponentNode
                     }
@@ -112,7 +106,7 @@ export default forwardRef<TextInput, InputWErrorProps>(
                     inputStyle={[
                         styles.input,
                         { color: props.isDisabled ? theme.colors.textSecondaryLight : theme.colors.textPrimary },
-                        isIOS && { marginBottom: (value || hasIconOrNode) ? Dimens.marginPrimaryHalf1_75X : Dimens.marginPrimaryThird },
+                        isIOS && { marginBottom: (value || hasIconOrNode) ? Dimens.marginPrimaryHalf1_75X : Dimens.marginPrimaryHalf1_5X },
                     ]}
                     renderErrorMessage={false}
                     onFocus={() => setFocusedState(true)}
@@ -143,41 +137,42 @@ export const handleFieldChange = (
 
 const themedStyles = (colors: Colors) => StyleSheet.create({
     inputBar: {
-        borderWidth: Dimens.borderWidth,
-        borderColor: colors.greyOutline,
-        backgroundColor: colors.inputBackground,
-        borderRadius: Dimens.inputRadius,
         height: Dimens.inputHeight,
-        justifyContent: 'center',
+        justifyContent: Dimens.alignCenter,
+        paddingHorizontal: Dimens.zero,
+        backgroundColor: colors.inputBackground,
+        borderRadius: Dimens.inputRadius
     },
     inputBarFocused: {
-        borderWidth: Dimens.borderWidthThick,
-        borderColor: colors.primary,
+        borderWidth: Dimens.borderWidth,
+        borderColor: colors.primary
     },
     inputBarError: {
-        borderWidth: Dimens.borderWidthThick,
-        borderColor: colors.error,
+        borderWidth: Dimens.borderWidth,
+        borderColor: colors.error
     },
     inputBarDisabled: {
-        backgroundColor: colors.disabledLight,
+        backgroundColor: colors.disabledLight
     },
     inputContainer: {
         borderBottomWidth: Dimens.zero,
-        justifyContent: 'center',
-        marginStart: isIOS ? Dimens.marginPrimaryHalf : Dimens.zero,
+        justifyContent: Dimens.alignCenter,
+        marginStart: isIOS ? Dimens.marginPrimary2_5X : Dimens.zero,
+        marginEnd: isIOS ? Dimens.marginPrimary2_5X : Dimens.zero,
     },
     input: {
         ...Fonts.Body,
-        justifyContent: 'center',
+        justifyContent: Dimens.alignCenter,
+        marginTop: Dimens.marginPrimaryHalf1_5X
     },
     label: {
         ...Fonts.Caption,
-        marginStart: Dimens.marginPrimaryHalf,
+        marginStart: Dimens.marginPrimaryHalf
     },
     inputError: {
         ...Fonts.Caption,
         color: colors.error,
         marginTop: Dimens.marginPrimary,
-        marginLeft: Dimens.marginPrimarySmallest,
+        marginLeft: Dimens.marginPrimarySmallest
     },
 });
