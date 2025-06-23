@@ -13,23 +13,29 @@ import { RouteProp } from '@react-navigation/native';
 export default {
     Welcome: 'Welcome',
     Login: 'Login',
+    Tabs: 'Tabs',
     Home: 'Home',
-    Details: 'Details',
+    Settings: 'Settings'
+    // Details: 'Details',
 } as const;
 
 // Define parameters for each screen (undefined means no params)
 export type RootStackParamList = {
     Welcome: undefined;
     Login: undefined;
+    Tabs: undefined;
     Home: undefined;
-    Details: { data: string[] },
+    Settings: undefined;
+    // Details: { data: string[] },
 };
 
 // Navigation Props
 export type WelcomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
 export type LoginScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
+export type TabsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Tabs'>;
 export type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
-export type DetailsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Details'>;
+export type SettingsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Settings'>;
+// export type DetailsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Details'>;
 
-// Route Props
-export type DetailsScreenRouteProp = RouteProp<RootStackParamList, 'Details'>;
+// // Route Props
+// export type DetailsScreenRouteProp = RouteProp<RootStackParamList, 'Details'>;

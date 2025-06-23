@@ -76,6 +76,7 @@ export default {
     textBtnIconSize: 20,
     btnIconSize: 24,
     welcomeIcSize: 134,
+    tabBarHeight: 50,
 
     // Font Weight
     fontWeightLight300: 300,

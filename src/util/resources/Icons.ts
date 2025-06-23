@@ -6,6 +6,8 @@ import WelcomeLogo from '../../../assets/icons/ic_welcome_logo.svg';
 import EyeOff from '../../../assets/icons/ic_eye_off.svg';
 import EyeOn from '../../../assets/icons/ic_eye_on.svg';
 import Heart from '../../../assets/icons/ic_heart.svg';
+import Home from '../../../assets/icons/ic_home.svg';
+import Settings from '../../../assets/icons/ic_settings.svg';
 
 export default {
     Back,
@@ -15,5 +17,7 @@ export default {
     WelcomeLogo,
     EyeOff,
     EyeOn,
-    Heart
+    Heart,
+    Home,
+    Settings
 };
