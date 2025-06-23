@@ -30,6 +30,8 @@ declare module '@rneui/themed' {
         bsHandleIndicator: string;
         textPrimaryStrict: string;
         shadowPrimary: string;
+        tabActive: string;
+        tabInactive: string;
     }
 }
 
@@ -116,6 +118,10 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         error: '#ED5151',
         clear: '#FFFFFF00',
         errorLightest: '#FDDFD9',
+
+        // tabs
+        tabActive: '#004CFF',
+        tabInactive: '#000000',
     },
     darkColors: {
         // shadow colors
@@ -157,6 +163,10 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         error: '#bd4040',
         clear: '#FFFFFF00',
         errorLightest: '#FDDFD9',
+
+        // tabs
+        tabActive: '#004CFF',
+        tabInactive: '#000000',
     },
     mode: getThemeMode(selectedTheme),
     components: {
