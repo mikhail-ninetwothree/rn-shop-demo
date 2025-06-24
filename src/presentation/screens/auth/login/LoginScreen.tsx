@@ -50,7 +50,7 @@ export default () => {
                     validateOnMount={false}
                     onSubmit={values => makeLogin(values)}>
                     {({ handleChange, handleBlur, handleSubmit, values, errors, setFieldError }) => (
-                        <View style={styles.formContainer}>
+                        <>
                             <View style={styles.inputContainer}>
                                 <InputWError
                                     placeholder={getString(Strings.loginIUsername)}
@@ -82,7 +82,7 @@ export default () => {
                                 onClick={handleSubmit}
                                 isDisabled={isPending || !values.username.length || !values.password.length}
                             />
-                        </View>
+                        </>
                     )}
                 </Formik>
                 {isPending && <FullscreenProgress/>}

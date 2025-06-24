@@ -6,6 +6,7 @@ import Routes, { RootStackParamList } from '@navigation/routes';
 import WelcomeScreen from 'src/presentation/screens/auth/welcome/WelcomeScreen';
 import LoginScreen from 'src/presentation/screens/auth/login/LoginScreen';
 import TabsScreen from '@screens/tabs/TabsScreen';
+import ProductDetailsScreen from 'src/presentation/screens/product_details/ProductDetailsScreen';
 
 const AuthStack = createStackNavigator<RootStackParamList>();
 const MainStack = createStackNavigator<RootStackParamList>();
@@ -38,6 +39,7 @@ function MainNavigator(): ReactElement {
     return (
         <MainStack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
             <MainStack.Screen name={Routes.Tabs} component={TabsScreen} />
+            <MainStack.Screen name={Routes.ProductDetails} component={ProductDetailsScreen} />
         </MainStack.Navigator>
     );
 }

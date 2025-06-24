@@ -1,5 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
+import { Product } from 'src/data/home/models/Product';
 
 // TODO: Details screen and props are there just for the example to show what is expected for the navigation usage.
 /**
@@ -15,8 +16,8 @@ export default {
     Login: 'Login',
     Tabs: 'Tabs',
     Home: 'Home',
+    ProductDetails: 'ProductDetails',
     Settings: 'Settings'
-    // Details: 'Details',
 } as const;
 
 // Define parameters for each screen (undefined means no params)
@@ -25,8 +26,8 @@ export type RootStackParamList = {
     Login: undefined;
     Tabs: undefined;
     Home: undefined;
+    ProductDetails: { product: Product, bgColor: string };
     Settings: undefined;
-    // Details: { data: string[] },
 };
 
 // Navigation Props
@@ -34,8 +35,8 @@ export type WelcomeScreenNavigationProp = StackNavigationProp<RootStackParamList
 export type LoginScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
 export type TabsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Tabs'>;
 export type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+export type ProductDetailsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'ProductDetails'>;
 export type SettingsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Settings'>;
-// export type DetailsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Details'>;
 
-// // Route Props
-// export type DetailsScreenRouteProp = RouteProp<RootStackParamList, 'Details'>;
+// Route Props
+export type ProductDetailsScreenRouteProp = RouteProp<RootStackParamList, 'ProductDetails'>;

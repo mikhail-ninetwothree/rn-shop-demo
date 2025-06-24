@@ -11,7 +11,7 @@ export default ({ ...props }: SvgProps) => {
         <Icons.Back
             width={Dimens.backBtnSize}
             height={Dimens.backBtnSize}
-            fill={theme.colors.black}
+            fill={theme.colors.primary}
             {...props}
         />
     );

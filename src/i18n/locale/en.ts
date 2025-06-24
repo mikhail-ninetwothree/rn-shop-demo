@@ -26,7 +26,12 @@ export default {
     loginBtn: 'Log In',
 
     // Home
-    homeBtnLogout: 'Log Out',
+    homeTitle: 'Shop',
+
+    // Product Details
+    availability: 'Availability:',
+    ratingsAndReviews: 'Rating & Reviews',
+    shipping: 'Shipping:',
 
     // Errors
     errorInvalidEmailFormat: 'Invalid email format',

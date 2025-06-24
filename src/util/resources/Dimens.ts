@@ -6,7 +6,9 @@ export default {
     half: '50%',
     halfNum: 0.5,
     fullNum: 1.0,
+    
     horizontal: 'row',
+    spaceBetween: 'space-between',
 
     // Position
     positionAbsolute: 'absolute',
@@ -20,12 +22,14 @@ export default {
     alignFlexEnd: 'flex-end',
     alignFlexStart: 'flex-start',
     alignStretch: 'stretch',
+    alignRight: 'right',
 
     // margin/padding
     marginPrimarySmallest: 1,
     marginPrimaryQuarter: 2,
     marginPrimaryThird: 3,
     marginPrimaryHalf: 4,
+    marginPrimaryHalf1_25X: 5,
     marginPrimaryHalf1_5X: 6,
     marginPrimaryHalf1_75X: 7,
     marginPrimary: 8,
@@ -52,8 +56,11 @@ export default {
     btnSmallCornerRadius: 8,
     inputRadius: 26,
     radiusSmallest: 4,
+    radiusSmallest1_5X: 5,
     radiusSmaller: 6,
     radiusSmall: 8,
+    radiusSmall1_5X: 9,
+    radiusNormal: 10,
     radiusDefault: 12,
     radiusMedium: 16,
     radiusMax: 1000,
@@ -61,6 +68,7 @@ export default {
     // Offset
     offsetZero: 0,
     offsetSmallest: 1,
+    offsetSmaller: 5,
 
     // Misc
     borderWidth: 1,
@@ -72,11 +80,13 @@ export default {
     btnHeight: 61,
     btnHeightSmall: 36,
     inputHeight: 52,
-    backBtnSize: 48,
+    backBtnSize: 44,
     textBtnIconSize: 20,
     btnIconSize: 24,
     welcomeIcSize: 134,
     tabBarHeight: 50,
+    dotSize: 10,
+    activeDotWidth: 40,
 
     // Font Weight
     fontWeightLight300: 300,
@@ -84,12 +94,16 @@ export default {
     fontWeightMedium500: 500,
     fontWeightSemiBold600: 600,
     fontWeightBold: 700,
+    fontWeightExtraBold: 800,
 
     // Fonts
     fontSizeSmallest: 10,
     fontSizeSmall: 12,
+    fontSizeSmaller: 13,
     fontSizeNormal: 14,
+    fontSizeNormal1_5X: 15,
     fontSizeMedium: 16,
+    fontSizeMedium1_5X: 17,
     fontSizeLarge: 18,
     fontSizeXLarge: 19,
     fontSizeX2Large: 20,
@@ -107,12 +121,17 @@ export default {
     lineHeightSmall: 10,
     lineHeightSmall1_5X: 14,
     lineHeightNormal: 16,
+    lineHeightNormal1_5X: 17,
+    lineHeightNormal1_75X: 18,
     lineHeightMedium: 20,
+    lineHeightMedium1_5X: 21,
     lineHeightLarge: 24,
+    lineHeightLarge1_5X: 26,
     lineHeightXLarge: 30,
     lineHeightX_5Large: 31,
     lineHeightX2Large: 32,
     lineHeightX3Large: 33,
-    lineHeightX4Large: 48,
+    lineHeightX4Large: 36,
+    lineHeightX5Large: 48,
     lineHeightLargest: 61,
 } as const;
