@@ -12,7 +12,12 @@ export default {
     loginBtn: 'Acceso',
 
     // Home
-    homeBtnLogout: 'Finalizar la sesión',
+    homeTitle: 'Shop',
+
+    // Product Details
+    availability: 'Availability:',
+    ratingsAndReviews: 'Rating & Reviews',
+    shipping: 'Shipping:',
 
     // Errors
     errorInvalidEmailFormat: 'Formato de correo electrónico no válido',

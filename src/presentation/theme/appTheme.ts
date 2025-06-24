@@ -32,6 +32,11 @@ declare module '@rneui/themed' {
         shadowPrimary: string;
         tabActive: string;
         tabInactive: string;
+        productBackgrounds: string[];
+        discountGradient: string[];
+        originalPrice: string;
+        rating: string;
+        ratingBackground: string;
     }
 }
 
@@ -113,6 +118,8 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
 
         // misc colors
         white: '#FFFFFF',
+        black: '#000000',
+
         background: '#FFFFFF',
         surface: '#FFFFFF',
         error: '#ED5151',
@@ -122,6 +129,13 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         // tabs
         tabActive: '#004CFF',
         tabInactive: '#000000',
+
+        // products
+        productBackgrounds: ['#dddedf', '#b02a43', '#a649ae', '#d9ac18', '#ffc8cd'],
+        discountGradient: ['#F81140', '#FF5790'],
+        originalPrice: '#F1AEAE',
+        rating: '#ECA61B',
+        ratingBackground: '#DFE9FF',
     },
     darkColors: {
         // shadow colors
@@ -158,6 +172,7 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
 
         // misc colors
         white: '#FFFFFF',
+        black: '#000000',
         background: '#242424',
         surface: '#FFFFFF',
         error: '#bd4040',
@@ -167,6 +182,13 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         // tabs
         tabActive: '#004CFF',
         tabInactive: '#000000',
+        
+        // products
+        productBackgrounds: ['#dddedf', '#b02a43', '#a649ae', '#d9ac18', '#ffc8cd'],
+        discountGradient: ['#F81140', '#FF5790'],
+        originalPrice: '#F1AEAE',
+        rating: '#ECA61B',
+        ratingBackground: '#DFE9FF',
     },
     mode: getThemeMode(selectedTheme),
     components: {

@@ -1,12 +1,12 @@
 import { Colors } from '@rneui/themed';
 import { StyleSheet } from 'react-native';
 import Dimens from '@dimens';
+import { EdgeInsets } from 'react-native-safe-area-context';
 
-export const themedStyles = (colors: Colors) => StyleSheet.create({
+export const themedStyles = (colors: Colors, insets: EdgeInsets) => StyleSheet.create({
     container: {
         flex: Dimens.fullFlex,
         backgroundColor: colors.surface,
-        alignItems: 'center',
-        padding: Dimens.marginPrimary3X,
-    },
+        paddingTop: insets.top,
+    }
 });

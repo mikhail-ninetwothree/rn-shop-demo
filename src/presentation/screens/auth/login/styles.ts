@@ -33,9 +33,6 @@ export const themedStyles = (colors: Colors, insets: EdgeInsets) => StyleSheet.c
         paddingBottom: insets.bottom,
         paddingHorizontal: Dimens.marginPrimary2_5X
     },
-    formContainer: {
-
-    },
     inputContainer: {
         marginBottom: Dimens.marginPrimary
     }

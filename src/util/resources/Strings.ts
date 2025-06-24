@@ -26,7 +26,12 @@ export enum Strings {
     loginBtn = 'loginBtn',
 
     // Home
-    homeBtnLogout = 'homeBtnLogout',
+    homeTitle = 'homeTitle',
+
+    // Product Details
+    availability = 'availability',
+    ratingsAndReviews = 'ratingsAndReviews',
+    shipping = 'shipping',
 
     // Errors
     errorInvalidEmailFormat = 'errorInvalidEmailFormat',
