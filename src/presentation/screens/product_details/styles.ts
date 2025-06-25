@@ -4,7 +4,7 @@ import Dimens from '@dimens';
 import { EdgeInsets } from 'react-native-safe-area-context';
 import Fonts from 'src/util/resources/Fonts';
 
-export const themedStyles = (colors: Colors, insets: EdgeInsets, width: number) => StyleSheet.create({
+export const themedStyles = (colors: Colors, insets: EdgeInsets) => StyleSheet.create({
     scrollView: {
         backgroundColor: colors.surface
     },
@@ -32,12 +32,12 @@ export const themedStyles = (colors: Colors, insets: EdgeInsets, width: number) 
     details: {
         marginTop: Dimens.marginPrimary1_25X,
         ...Fonts.Caption,
-        color: colors.black,
+        color: colors.textTetriary,
         textAlign: Dimens.alignRight
     },
     priceWithDiscount: {
         ...Fonts.H2_5,
-        color: colors.black,
+        color: colors.textTetriary,
         letterSpacing: -.26,
     },
     discountPricesContainer: {
@@ -57,24 +57,24 @@ export const themedStyles = (colors: Colors, insets: EdgeInsets, width: number) 
     title: {
         marginTop: Dimens.marginPrimary1_25X,
         ...Fonts.H2,
-        color: colors.black        
+        color: colors.textTetriary        
     },
     description: {
         marginTop: Dimens.marginPrimary1_25X,
         ...Fonts.H6,
-        color: colors.black        
+        color: colors.textTetriary        
     },
     ratingsAndReviews: {
         marginTop: Dimens.marginPrimary1_25X,
         ...Fonts.H3_1,
-        color: colors.black  
+        color: colors.textTetriary  
     },
     rating: {
-        alignItems: Dimens.alignFlexStart
+        alignItems: Dimens.alignFlexStart,
     },
     ratingContainer: {
         marginTop: Dimens.marginPrimary,
-        flexDirection: Dimens.horizontal
+        flexDirection: Dimens.horizontal,
     },
     ratingValue: {
         marginLeft: Dimens.marginPrimary1_75X,

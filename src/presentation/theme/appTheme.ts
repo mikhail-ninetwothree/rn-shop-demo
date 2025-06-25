@@ -8,6 +8,7 @@ declare module '@rneui/themed' {
     export interface Colors {
         primaryDark: string;
         textPrimary: string;
+        textTetriary: string;
         textPrimaryLight: string;
         surface: string;
         tabBackground: string;
@@ -37,6 +38,12 @@ declare module '@rneui/themed' {
         originalPrice: string;
         rating: string;
         ratingBackground: string;
+        languageBackground: string;
+        languageBackgroundSelected: string;
+        switchOn: string;
+        switchOff: string;
+        dividerOpacity: number;
+        rightArrow: string;
     }
 }
 
@@ -98,6 +105,7 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
 
         // text colors
         textPrimary: '#202020',
+        textTetriary: '#000000',
         textPrimaryLight: '#D2D2D2',
         textSecondary: '#303336',
         textSecondaryLight: '#828488',
@@ -108,8 +116,8 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         textPrimaryStrict: '#050505',
 
         // components colors
-        greyOutline: '#A2A2A2',
-        inputBackground: '#F8F8F8',
+        divider: '#000000',
+        inputBackground: '#F2F2F2',
         progressBackground: '#00000026',
         disabled: '#B9BBBE',
         disabledLight: '#F0F1F5',
@@ -136,10 +144,19 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         originalPrice: '#F1AEAE',
         rating: '#ECA61B',
         ratingBackground: '#DFE9FF',
+
+        // settings
+        languageBackground: '#F9F9F9',
+        languageBackgroundSelected: '#E5EBFC',
+        switchOn: '#34C759',
+        switchOff: '#E5E5EA',
+        
+        dividerOpacity: 0.1,
+        rightArrow: '#000000'
     },
     darkColors: {
         // shadow colors
-        shadowPrimary: '#000000',
+        shadowPrimary: '#ffffff',
 
         // main colors
         primary: '#004CFF',
@@ -151,7 +168,8 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         dangerLight: '#E28270',
 
         // text colors
-        textPrimary: '#202020',
+        textPrimary: '#ffffff',
+        textTetriary: '#ffffff',
         textPrimaryLight: '#D2D2D2',
         textSecondary: '#303336',
         textSecondaryLight: '#828488',
@@ -162,10 +180,10 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         textPrimaryStrict: '#050505',
 
         // components colors
-        greyOutline: '#A2A2A2',
-        inputBackground: '#F8F8F8',
+        divider: '#ffffff',
+        inputBackground: '#2C2C2E',
         progressBackground: '#00000026',
-        disabled: '#F9F9F9',
+        disabled: '#3A3A3C',
         disabledLight: '#F0F1F5',
         bsBackdrop: '#14181BB2',
         bsHandleIndicator: '#3C3C434D',
@@ -174,14 +192,14 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         white: '#FFFFFF',
         black: '#000000',
         background: '#242424',
-        surface: '#FFFFFF',
+        surface: '#202020',
         error: '#bd4040',
         clear: '#FFFFFF00',
         errorLightest: '#FDDFD9',
 
         // tabs
         tabActive: '#004CFF',
-        tabInactive: '#000000',
+        tabInactive: '#ffffff',
         
         // products
         productBackgrounds: ['#dddedf', '#b02a43', '#a649ae', '#d9ac18', '#ffc8cd'],
@@ -189,6 +207,15 @@ const appTheme = (selectedTheme: AppTheme) => createTheme({
         originalPrice: '#F1AEAE',
         rating: '#ECA61B',
         ratingBackground: '#DFE9FF',
+
+        // settings
+        languageBackground: '#1C1C1E',
+        languageBackgroundSelected: '#2C3E70',
+        switchOn: '#34C759',
+        switchOff: '#E5E5EA',
+
+        dividerOpacity: 0.2,
+        rightArrow: '#ffffff',
     },
     mode: getThemeMode(selectedTheme),
     components: {

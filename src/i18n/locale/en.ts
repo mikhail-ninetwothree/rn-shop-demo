@@ -33,6 +33,22 @@ export default {
     ratingsAndReviews: 'Rating & Reviews',
     shipping: 'Shipping:',
 
+    // Settings
+    settingsTitle: 'Settings',
+    settingsPersonal: 'Personal',
+    settingsProfile: 'Profile',
+    settingsAccount: 'Account',
+    settingsLanguage: 'Language',
+    settingsLanguageSystem: 'System',
+    settingsLanguageEnglish: 'English',
+    settingsLanguageSpanish: 'Spanish',
+    settingsTheme: 'Dark Mode',
+    settingsLogoutTitle: 'Are you sure you really want to logout?',
+    settingsLogout: 'Logout',
+
+    // Profile
+    profileTitle: 'Your Profile',
+
     // Errors
     errorInvalidEmailFormat: 'Invalid email format',
     errorRequiredField: 'This is a required field',

@@ -2,9 +2,12 @@ import EncryptedStorage from 'react-native-encrypted-storage';
 import { AppTheme } from '@theme/appTheme';
 import { Locale } from '@localization';
 import { runSafely } from '@util/functionUtils';
+import { UserProfile } from '../auth/models/LoginResponse';
 
 const AUTH_TOKEN = 'auth_token';
+const USER_PROFILE = 'user_profile';
 const IS_USER_LOGGED_IN = 'is_user_logged_in';
+const HAS_SEEN_WELCOME = 'has_seen_welcome';
 const APP_THEME = 'app_theme';
 const APP_LOCALE = 'app_locale';
 
@@ -79,4 +82,27 @@ export async function clearStorage() {
         () => EncryptedStorage.clear(),
         'Failed to clear the storage'
     );
+}
+
+export async function setSeenWelcome() {
+    await runSafely(
+        () => EncryptedStorage.setItem(HAS_SEEN_WELCOME, JSON.stringify(true)),
+        'Failed to set welcome screen as seen'
+    );
+}
+
+export async function setUserProfile(user: UserProfile) {
+    await runSafely(
+        () => EncryptedStorage.setItem(USER_PROFILE, JSON.stringify(user)),
+        'Failed to save user profile'
+    );
+}
+
+export async function getUserProfile(): Promise<UserProfile | null> {
+    const userProfile = await runSafely(
+        () => EncryptedStorage.getItem(USER_PROFILE),
+        'Failed to retrieve user profile value',
+        null
+    );
+    return userProfile ? JSON.parse(userProfile) : null;
 }

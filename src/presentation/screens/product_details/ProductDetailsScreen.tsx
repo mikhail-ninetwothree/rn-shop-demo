@@ -19,10 +19,9 @@ export default () => {
     const route = useRoute<ProductDetailsScreenRouteProp>();
     const { product, bgColor } = route.params;
 
-    const { width } = Dimensions.get('window');
     const { theme } = useTheme();
     const insets = useSafeAreaInsets();
-    const styles = themedStyles(theme.colors, insets, width);
+    const styles = themedStyles(theme.colors, insets);
        
     const goBack = () => navigation.goBack();
 
@@ -56,13 +55,16 @@ export default () => {
                     <Text style={styles.description}>{product.description}</Text>
                     <Text style={styles.ratingsAndReviews}>{getString(Strings.ratingsAndReviews)}</Text>
                     <View style={styles.ratingContainer}>
-                        <Rating
-                            style={styles.rating}
-                            type='custom'
-                            readonly
-                            startingValue={product.rating}
-                            ratingColor={theme.colors.rating}
-                            imageSize={20}/>
+                        <View>
+                            <Rating
+                                style={styles.rating}
+                                type='custom'
+                                readonly
+                                startingValue={product.rating}
+                                ratingColor={theme.colors.rating}
+                                tintColor={theme.colors.surface}
+                                imageSize={20}/>
+                        </View>
                         <View style={styles.ratingValue}>
                             <Text style={styles.ratingText}>{`${product.rating}/5`}</Text>
                         </View>

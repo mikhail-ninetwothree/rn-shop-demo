@@ -114,6 +114,27 @@ const Caption = {
     lineHeight: Dimens.lineHeightNormal,
 } as TextStyle;
 
+const Caption2 = {
+    fontFamily: 'NunitoSans',
+    fontWeight: Dimens.fontWeightMedium500,
+    fontSize: Dimens.fontSizeMedium,
+    lineHeight: Dimens.lineHeightMedium,
+} as TextStyle;
+
+const Caption3 = {
+    fontFamily: 'NunitoSans',
+    fontWeight: Dimens.fontWeightRegular400,
+    fontSize: Dimens.fontSizeNormal1_5X,
+    lineHeight: Dimens.lineHeightNormal,
+} as TextStyle;
+
+const Caption4 = {
+    fontFamily: 'Raleway-Medium',
+    fontWeight: Dimens.fontWeightMedium500,
+    fontSize: Dimens.fontSizeMedium,
+    lineHeight: Dimens.lineHeightMedium,
+} as TextStyle;
+
 export default {
     H1,
     H2,
@@ -131,4 +152,7 @@ export default {
     SubtitleSmaller,
     Body,
     Caption,
+    Caption2,
+    Caption3,
+    Caption4
 };

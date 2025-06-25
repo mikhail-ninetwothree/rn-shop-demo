@@ -8,12 +8,16 @@ export default {
     fullNum: 1.0,
     
     horizontal: 'row',
+    column: 'column',
     spaceBetween: 'space-between',
 
     // Position
     positionAbsolute: 'absolute',
     positionRelative: 'relative',
     positionStatic: 'static',
+
+    // Overflow
+    overFlowHidden: 'hidden',
 
     // Align
     alignAuto: 'auto',
@@ -41,7 +45,9 @@ export default {
     marginPrimary2_5X: 20,
     marginPrimary3X: 24,
     marginPrimary4X: 26,
+    marginPrimary4_25X: 27,
     marginPrimary4_5X: 28,
+    marginPrimary4_75X: 30,
     marginPrimary5X: 32,
     marginPrimary5_5X: 36,
     marginPrimary6X: 40,
@@ -87,6 +93,7 @@ export default {
     tabBarHeight: 50,
     dotSize: 10,
     activeDotWidth: 40,
+    avatarSize: 105,
 
     // Font Weight
     fontWeightLight300: 300,

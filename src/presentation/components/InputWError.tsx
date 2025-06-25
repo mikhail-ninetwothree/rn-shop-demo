@@ -92,6 +92,7 @@ export default forwardRef<TextInput, InputWErrorProps>(
                             <RightIconSvg
                                 width={Dimens.textBtnIconSize}
                                 height={Dimens.textBtnIconSize}
+                                color={theme.colors.textPrimary}
                             />
                         </Pressable> : RightComponentNode && RightComponentNode
                     }

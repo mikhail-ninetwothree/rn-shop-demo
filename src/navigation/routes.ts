@@ -17,7 +17,9 @@ export default {
     Tabs: 'Tabs',
     Home: 'Home',
     ProductDetails: 'ProductDetails',
-    Settings: 'Settings'
+    Settings: 'Settings',
+    Profile: 'Profile',
+    LanguageSettings: 'LanguageSettings',
 } as const;
 
 // Define parameters for each screen (undefined means no params)
@@ -28,6 +30,8 @@ export type RootStackParamList = {
     Home: undefined;
     ProductDetails: { product: Product, bgColor: string };
     Settings: undefined;
+    Profile: undefined;
+    LanguageSettings: undefined;
 };
 
 // Navigation Props
@@ -37,6 +41,8 @@ export type TabsScreenNavigationProp = StackNavigationProp<RootStackParamList, '
 export type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 export type ProductDetailsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'ProductDetails'>;
 export type SettingsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Settings'>;
+export type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Profile'>;
+export type LanguageSettingsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'LanguageSettings'>;
 
 // Route Props
 export type ProductDetailsScreenRouteProp = RouteProp<RootStackParamList, 'ProductDetails'>;

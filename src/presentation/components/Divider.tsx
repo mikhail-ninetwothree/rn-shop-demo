@@ -23,8 +23,9 @@ export default ({ ...props }: DividerProps) => {
 
 export const themedStyles = (colors: Colors) => StyleSheet.create({
     vDivider: {
-        backgroundColor: colors.greyOutline,
         height: Dimens.dividerHeight,
         width: Dimens.full,
+        backgroundColor: colors.divider,
+        opacity: colors.dividerOpacity
     },
 });

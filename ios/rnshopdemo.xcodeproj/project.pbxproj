@@ -20,6 +20,7 @@
 		F39CAB6F59F7AE5487A22A36 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		E47F22CBD85A403E9E032102 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9798E5D9B6344DF885421FC8 /* BootSplash.storyboard */; };
 		B6278D7227974686ACD71528 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B3E79B6CE24504957D5E1F /* Colors.xcassets */; };
+		966E0974F9824B3FB8E4B397 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E77E1DCE4544471AA476C98 /* Raleway-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		9798E5D9B6344DF885421FC8 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "rnshopdemo/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		35B3E79B6CE24504957D5E1F /* Colors.xcassets */ = {isa = PBXFileReference; name = "Colors.xcassets"; path = "rnshopdemo/Colors.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
+		8E77E1DCE4544471AA476C98 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; name = "Raleway-Medium.ttf"; path = "../assets/fonts/Raleway-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				A737C0C46705485196AD5F97 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf */,
 				72519720774245AEA20FB14D /* Poppins-Medium.ttf */,
 				AFD3C0199B01443080CE66F8 /* Raleway-ExtraBold.ttf */,
+				8E77E1DCE4544471AA476C98 /* Raleway-Medium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				76E56D34B1124A32B4C7D5D3 /* Raleway-ExtraBold.ttf in Resources */,
 				E47F22CBD85A403E9E032102 /* BootSplash.storyboard in Resources */,
 				B6278D7227974686ACD71528 /* Colors.xcassets in Resources */,
+				966E0974F9824B3FB8E4B397 /* Raleway-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

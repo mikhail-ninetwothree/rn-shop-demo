@@ -8,6 +8,9 @@ import EyeOn from '../../../assets/icons/ic_eye_on.svg';
 import Heart from '../../../assets/icons/ic_heart.svg';
 import Home from '../../../assets/icons/ic_home.svg';
 import Settings from '../../../assets/icons/ic_settings.svg';
+import RightArrow from '../../../assets/icons/ic_right_arrow.svg';
+import Check from '../../../assets/icons/ic_check.svg';
+import CheckEmpty from '../../../assets/icons/ic_check_empty.svg';
 
 export default {
     Back,
@@ -19,5 +22,8 @@ export default {
     EyeOn,
     Heart,
     Home,
-    Settings
+    Settings,
+    RightArrow,
+    Check,
+    CheckEmpty
 };
