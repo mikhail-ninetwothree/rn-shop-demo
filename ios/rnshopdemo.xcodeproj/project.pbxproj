@@ -18,6 +18,8 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9209BA4C8994449F98FFDEFE /* RethinkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C42A5A4A1D014BDBAEED7F0E /* RethinkSans-SemiBold.ttf */; };
 		F39CAB6F59F7AE5487A22A36 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		E47F22CBD85A403E9E032102 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9798E5D9B6344DF885421FC8 /* BootSplash.storyboard */; };
+		B6278D7227974686ACD71528 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B3E79B6CE24504957D5E1F /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		AFD3C0199B01443080CE66F8 /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Raleway-ExtraBold.ttf"; path = "../assets/fonts/Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
 		C42A5A4A1D014BDBAEED7F0E /* RethinkSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RethinkSans-SemiBold.ttf"; path = "../assets/fonts/RethinkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		9798E5D9B6344DF885421FC8 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "rnshopdemo/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		35B3E79B6CE24504957D5E1F /* Colors.xcassets */ = {isa = PBXFileReference; name = "Colors.xcassets"; path = "rnshopdemo/Colors.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				9798E5D9B6344DF885421FC8 /* BootSplash.storyboard */,
+				35B3E79B6CE24504957D5E1F /* Colors.xcassets */,
 			);
 			name = rnshopdemo;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 				591802544B5E43B4972E55E1 /* NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf in Resources */,
 				4C64CF33807649F1868EFDBF /* Poppins-Medium.ttf in Resources */,
 				76E56D34B1124A32B4C7D5D3 /* Raleway-ExtraBold.ttf in Resources */,
+				E47F22CBD85A403E9E032102 /* BootSplash.storyboard in Resources */,
+				B6278D7227974686ACD71528 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
