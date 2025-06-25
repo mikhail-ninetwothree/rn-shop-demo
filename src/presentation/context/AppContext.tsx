@@ -3,8 +3,9 @@ import { AppTheme, getCurrentTheme } from '@theme/appTheme';
 import { Locale, preferredLocale } from '@localization';
 import I18n from 'i18n-js';
 import { Appearance } from 'react-native';
-import { clearStorage, getAppLocale, isLoggedIn, setAppLocale, setAppTheme, setIsUserLoggedIn } from '@data/local/appStorage';
+import { clearStorage, getAppLocale, getUserProfile, isLoggedIn, setAppLocale, setAppTheme, setIsUserLoggedIn, setSeenWelcome } from '@data/local/appStorage';
 import { queryClient } from 'src/data/remote/networkModule';
+import { UserProfile } from 'src/data/auth/models/LoginResponse';
 
 interface IAppState {
     isInitialized: boolean;
@@ -12,16 +13,19 @@ interface IAppState {
     theme: AppTheme;
     locale: Locale;
     showGlobalProgress: boolean;
+    hasSeenWelcome: boolean;
+    user: UserProfile | null;
 }
 
 interface IAppContext {
     appState: IAppState;
-    logIn: () => void;
+    logIn: (user: UserProfile) => void;
     logOut: () => void;
     changeAppTheme: (theme: AppTheme) => void;
     updateThemeBySystem: (theme: AppTheme) => void;
     changeAppLocale: (locale: Locale) => void;
     changeGlobalProgressState: (showProgress: boolean) => void;
+    seenWelcome: () => void;
 }
 
 const defaultAppState: IAppState = {
@@ -30,16 +34,19 @@ const defaultAppState: IAppState = {
     theme: AppTheme.LIGHT,
     locale: Locale.SYSTEM,
     showGlobalProgress: false,
+    hasSeenWelcome: false,
+    user: null
 };
 
 const defaultContextValue: IAppContext = {
     appState: defaultAppState,
-    logIn: () => { },
+    logIn: (user: UserProfile) => { },
     logOut: () => { },
     changeAppTheme: () => { },
     updateThemeBySystem: () => { },
     changeAppLocale: () => { },
     changeGlobalProgressState: () => { },
+    seenWelcome: () => {}
 };
 
 const AppContext = createContext<IAppContext>(defaultContextValue);
@@ -62,15 +69,16 @@ export const AppContextProvider: FC<{ children: ReactNode }> = ({ children }) =>
                 locale = await preferredLocale();
             }
             I18n.locale = locale.valueOf();
-            setAppState((prevState) => ({ ...prevState, isUserLoggedIn: isUserLoggedIn, theme: theme, locale: locale, isInitialized: true }));
+            const user = await getUserProfile();
+            setAppState((prevState) => ({ ...prevState, isUserLoggedIn: isUserLoggedIn, theme: theme, locale: locale, isInitialized: true, user: user }));
         };
 
         initState();
     }, []);
 
-    function logIn() {
+    function logIn(user: UserProfile) {
         setIsUserLoggedIn(true);
-        setAppState({ ...appState, isUserLoggedIn: true });
+        setAppState({ ...appState, isUserLoggedIn: true, user: user });
     }
 
     async function logOut() {
@@ -98,8 +106,13 @@ export const AppContextProvider: FC<{ children: ReactNode }> = ({ children }) =>
         setAppState({ ...appState, showGlobalProgress: showProgress });
     }
 
+    function seenWelcome() {
+        setSeenWelcome()
+        setAppState({ ...appState, hasSeenWelcome: true });
+    }
+
     return (
-        <AppContext.Provider value={{ appState, logIn, logOut, changeAppTheme, updateThemeBySystem, changeAppLocale, changeGlobalProgressState }}>
+        <AppContext.Provider value={{ appState, logIn, logOut, changeAppTheme, updateThemeBySystem, changeAppLocale, changeGlobalProgressState, seenWelcome }}>
             {children}
         </AppContext.Provider>
     );

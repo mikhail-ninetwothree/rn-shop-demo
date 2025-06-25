@@ -7,6 +7,8 @@ import WelcomeScreen from 'src/presentation/screens/auth/welcome/WelcomeScreen';
 import LoginScreen from 'src/presentation/screens/auth/login/LoginScreen';
 import TabsScreen from '@screens/tabs/TabsScreen';
 import ProductDetailsScreen from 'src/presentation/screens/product_details/ProductDetailsScreen';
+import LanguageSettingsScreen from 'src/presentation/screens/language_settings/LanguageSettingsScreen';
+import ProfileScreen from 'src/presentation/screens/profile/ProfileScreen';
 
 const AuthStack = createStackNavigator<RootStackParamList>();
 const MainStack = createStackNavigator<RootStackParamList>();
@@ -26,8 +28,12 @@ export default () => {
 };
 
 function AuthNavigator(): ReactElement {
+    const { appState } = useAppContext();
+    
     return (
-        <AuthStack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
+        <AuthStack.Navigator 
+            screenOptions={{ headerShown: false, gestureEnabled: false }}
+            initialRouteName={appState.hasSeenWelcome ? Routes.Login : Routes.Welcome}>
             <AuthStack.Screen name={Routes.Welcome} component={WelcomeScreen} />
             <AuthStack.Screen name={Routes.Login} component={LoginScreen} />
         </AuthStack.Navigator>
@@ -40,6 +46,8 @@ function MainNavigator(): ReactElement {
         <MainStack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false }}>
             <MainStack.Screen name={Routes.Tabs} component={TabsScreen} />
             <MainStack.Screen name={Routes.ProductDetails} component={ProductDetailsScreen} />
+            <MainStack.Screen name={Routes.Profile} component={ProfileScreen} />
+            <MainStack.Screen name={Routes.LanguageSettings} component={LanguageSettingsScreen} />
         </MainStack.Navigator>
     );
 }

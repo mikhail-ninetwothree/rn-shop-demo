@@ -1,7 +1,7 @@
 import { useLoginMutation } from '@data/auth/authDataSource';
 import { LoginData } from '@data/auth/models/LoginData';
 import { useAppContext } from '@context/AppContext';
-import { setAuthToken } from 'src/data/local/appStorage';
+import { setAuthToken, setUserProfile } from 'src/data/local/appStorage';
 import useAlert from '@alert';
 
 export const useLogin = () => {
@@ -11,8 +11,10 @@ export const useLogin = () => {
     const makeLogin = (data: LoginData) => {
         mutate(data, {
             onSuccess: async (result) => {
-                await setAuthToken(result.accessToken);
-                logIn();
+                const { accessToken, ...user } = result;
+                await setAuthToken(accessToken);
+                await setUserProfile(user);
+                logIn(user);
             },
             onError: (error) => {
                 console.log('login error: ' + error.message);

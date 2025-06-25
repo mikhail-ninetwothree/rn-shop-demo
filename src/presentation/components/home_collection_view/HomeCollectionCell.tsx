@@ -61,7 +61,7 @@ export const themedStyles = (colors: Colors) => StyleSheet.create({
     productTitle: {
         marginTop: Dimens.marginPrimaryHalf1_5X,
         ...Fonts.Caption,
-        color: colors.black
+        color: colors.textTetriary
     },
     pricesContainer: {
         marginTop: Dimens.marginPrimaryHalf,

@@ -9,13 +9,16 @@ import ButtonPrimary from '@components/button/ButtonPrimary';
 import { useNavigation } from '@react-navigation/native';
 import { LoginScreenNavigationProp } from 'src/navigation/routes';
 import Routes from '@navigation/routes';
+import { useAppContext } from 'src/presentation/context/AppContext';
 
 export default () => {
+    const { seenWelcome } = useAppContext();
     const { theme } = useTheme();
     const insets = useSafeAreaInsets();
     const styles = themedStyles(theme.colors, insets);
     const navigation = useNavigation<LoginScreenNavigationProp>();
     const handleStart = () => {
+        seenWelcome();
         navigation.navigate(Routes.Login);
     };
     return (

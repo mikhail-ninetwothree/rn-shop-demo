@@ -37,3 +37,9 @@ export const preferredLocale = async (): Promise<Locale> => {
 export const getString = (key: Strings, ...args: any[]) => sprintf(I18n.t(key.valueOf()), ...args);
 
 export default I18n;
+
+export const getLocaleLabels = (): Record<Locale, string> => ({
+    [Locale.SYSTEM]: getString(Strings.settingsLanguageSystem),
+    [Locale.ENGLISH]: getString(Strings.settingsLanguageEnglish),
+    [Locale.SPANISH]: getString(Strings.settingsLanguageSpanish),
+});

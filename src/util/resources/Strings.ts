@@ -33,6 +33,22 @@ export enum Strings {
     ratingsAndReviews = 'ratingsAndReviews',
     shipping = 'shipping',
 
+    // Settings
+    settingsTitle = 'settingsTitle',
+    settingsPersonal = 'settingsPersonal',
+    settingsProfile = 'settingsProfile',
+    settingsAccount = 'settingsAccount',
+    settingsLanguage = 'settingsLanguage',
+    settingsLanguageSystem = 'settingsLanguageSystem',
+    settingsLanguageEnglish = 'settingsLanguageEnglish',
+    settingsLanguageSpanish = 'settingsLanguageSpanish',
+    settingsTheme = 'settingsTheme',
+    settingsLogoutTitle = 'settingsLogoutTitle',
+    settingsLogout = 'settingsLogout',
+
+    // Profile
+    profileTitle = 'profileTitle',
+
     // Errors
     errorInvalidEmailFormat = 'errorInvalidEmailFormat',
     errorRequiredField = 'errorRequiredField',
@@ -46,4 +62,9 @@ export enum Strings {
     errorServerError = 'errorServerError',
     errorNoInternetTTitle = 'errorStateNoInternetTTitle',
     errorNoInternetTDesc = 'errorStateNoInternetTDesc',
+}
+
+export function capitalize(str: string): string {
+    if (!str) return '';
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }

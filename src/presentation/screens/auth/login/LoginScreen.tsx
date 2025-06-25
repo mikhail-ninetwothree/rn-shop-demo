@@ -40,7 +40,7 @@ export default () => {
                 <Text style={styles.title}>{getString(Strings.loginTitle)}</Text>
                 <View style={styles.subtitleContainer}>
                     <Text style={styles.subtitle}>{getString(Strings.loginSubtitle)}</Text>
-                    <Icons.Heart/>
+                    <Icons.Heart color={theme.colors.textPrimary}/>
                 </View>
                 <Formik
                     initialValues={initialValues}
