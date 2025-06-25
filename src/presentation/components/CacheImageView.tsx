@@ -22,7 +22,7 @@ export default ({ ...props }: CacheImageViewProps) => {
                 onLoadStart={() => setImageLoading(true)}
                 onLoadEnd={() => setImageLoading(false)}/>
             {isImageLoading && (
-                <ActivityIndicator style={styles.spinner}/>
+                <ActivityIndicator color={theme.colors.primary} style={styles.spinner}/>
             )}
         </>
     );
@@ -30,8 +30,7 @@ export default ({ ...props }: CacheImageViewProps) => {
 
 export const themedStyles = (colors: Colors) => StyleSheet.create({
     spinner: {
-        ...StyleSheet.absoluteFillObject,
-        color: colors.primary
+        ...StyleSheet.absoluteFillObject
     },
     image: {
         width: Dimens.full

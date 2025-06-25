@@ -1,8 +1,9 @@
 import Dimens from '@dimens';
-import { Animated, Dimensions, FlatList, StyleSheet, View, ViewStyle } from 'react-native';
+import { Animated, Dimensions, FlatList, StyleSheet, TouchableOpacity, View, ViewStyle } from 'react-native';
 import React, { useRef } from 'react';
 import { Colors, useTheme } from '@rneui/themed';
 import CacheImageView from './CacheImageView';
+import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface ImageCarouselProps {
     images: string[];
@@ -12,8 +13,10 @@ interface ImageCarouselProps {
 export default ({ ...props }: ImageCarouselProps) => {
     const { width } = Dimensions.get('window');
     const { theme } = useTheme();
-    const styles = themedStyles(theme.colors, width);
+    const insets = useSafeAreaInsets();
+    const styles = themedStyles(theme.colors, insets, width);
     const scrollX = useRef(new Animated.Value(0)).current;
+    const flatListRef = useRef<FlatList>(null);
     const onScroll = Animated.event(
         [{ nativeEvent: { contentOffset: { x: scrollX }}}],
         { useNativeDriver: false }
@@ -23,12 +26,16 @@ export default ({ ...props }: ImageCarouselProps) => {
             uri={item}
             style={styles.image}/>
     );
+    const scrollToIndex = (index: number) => {
+        flatListRef.current?.scrollToIndex({ index, animated: true });
+    };
     return (
-        <View>
+        <View style={props.style}>
             {props.images && props.images.length > 0 && (
                 <FlatList
-                    style={props.style}
+                    ref={flatListRef}
                     data={props.images}
+                    style={styles.сontainer}
                     horizontal
                     pagingEnabled
                     bounces={false}
@@ -54,9 +61,11 @@ export default ({ ...props }: ImageCarouselProps) => {
                             extrapolate: 'clamp',
                         });
                         return (
-                            <Animated.View
+                            <TouchableOpacity
                                 key={index}
-                                style={[styles.dot, { opacity: dotOpacity, width: dotWidth }]}/>
+                                onPress={() => scrollToIndex(index)}>
+                                <Animated.View style={[styles.dot, { opacity: dotOpacity, width: dotWidth }]}/>
+                            </TouchableOpacity>
                         );
                     })}
                 </View>
@@ -65,7 +74,10 @@ export default ({ ...props }: ImageCarouselProps) => {
     );
 };
 
-export const themedStyles = (colors: Colors, width: number) => StyleSheet.create({
+export const themedStyles = (colors: Colors, insets: EdgeInsets, width: number) => StyleSheet.create({
+    сontainer: {
+        marginTop: insets.top
+    },
     image: {
         width: width,
         aspectRatio: 0.85

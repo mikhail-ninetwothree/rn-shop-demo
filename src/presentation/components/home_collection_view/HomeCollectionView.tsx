@@ -67,7 +67,7 @@ export default ({ ...props }: CollectionViewProps) => {
             windowSize={6}
             onEndReached={props.onLoadMore}
             onEndReachedThreshold={0.15}
-            ListFooterComponent={props.isLoadingMore ? <ActivityIndicator style={styles.spinner} /> : null}
+            ListFooterComponent={props.isLoadingMore ? <ActivityIndicator color={theme.colors.primary}/> : null}
         />
     );
 };
@@ -88,8 +88,5 @@ export const themedStyles = (colors: Colors, itemWidth: number) => StyleSheet.cr
     },
     item: {
         width: itemWidth
-    },
-    spinner: {
-        color: colors.primary
     }
 });

@@ -11,6 +11,9 @@ export const themedStyles = (colors: Colors, insets: EdgeInsets, width: number) 
     container: {
         flex: Dimens.fullFlex,
     },
+    carousel: {
+        marginTop: insets.top
+    },
     backBtn: {
         position: Dimens.positionAbsolute,
         top: insets.top
