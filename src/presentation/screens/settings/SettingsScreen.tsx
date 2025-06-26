@@ -14,6 +14,7 @@ import { useNavigation } from '@react-navigation/native';
 import Routes, { SettingsScreenNavigationProp } from 'src/navigation/routes';
 import SwitchPrimary from 'src/presentation/components/SwitchPrimary';
 import { AppTheme } from 'src/presentation/theme/appTheme';
+import FastImage from 'react-native-fast-image';
 
 export default () => {
     const navigation = useNavigation<SettingsScreenNavigationProp>();
@@ -51,7 +52,11 @@ export default () => {
                 },
                 {
                     text: getString(Strings.settingsLogout),
-                    onPress: () => logOut(),
+                    onPress: () => {
+                        FastImage.clearMemoryCache();
+                        FastImage.clearDiskCache();
+                        logOut();
+                    },
                     style: 'default'
                 }
             ],
