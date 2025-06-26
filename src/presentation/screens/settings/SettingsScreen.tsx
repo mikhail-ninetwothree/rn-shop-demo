@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text, useTheme } from '@rneui/themed';
 import { Alert, ScrollView, TouchableOpacity, View } from 'react-native';
 import { themedStyles } from './styles';
@@ -30,6 +30,9 @@ export default () => {
         changeAppTheme(isDarkModeEnabled ? AppTheme.LIGHT : AppTheme.DARK);
         setDarkModeEnabled(previous => !previous);
     }
+    useEffect(() => {
+        setDarkModeEnabled(appState.theme === AppTheme.DARK);
+    }, [appState.theme]);
     
     const openProfile = () => {
         navigation.navigate(Routes.Profile);
