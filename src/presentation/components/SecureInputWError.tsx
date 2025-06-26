@@ -11,7 +11,8 @@ export default forwardRef<TextInput, InputWErrorProps>(
         };
 
         return (
-            <InputWError 
+            <InputWError
+                ref={ref}
                 RightIconSvg={isPasswordSecure ? Icons.EyeOff : Icons.EyeOn}
                 rightIconClick={() => handeRightIconClick()}
                 secureTextEntry={isPasswordSecure}
