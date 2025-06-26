@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import { TextInput, View } from 'react-native';
 import { Spacer } from '@components/Spacer';
 import { themedStyles } from './styles';
-import { loginFormValidationSchema } from './validator';
+import { getLoginFormValidationSchema } from './validator';
 import { getString } from '@localization';
 import { Strings } from '@strings';
 import InputWError, { handleFieldChange } from '@components/InputWError';
@@ -32,6 +32,7 @@ export default () => {
     const styles = themedStyles(theme.colors, insets);
     const { makeLogin, isPending } = useLogin();
     const passwordInputRef = useRef<TextInput>(null);
+    const loginFormValidationSchema = getLoginFormValidationSchema();
     return (
         <View style={styles.container}>
             <Images.LoginBackground width={Dimens.full} height={Dimens.full} style={styles.background}/>
